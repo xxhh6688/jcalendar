@@ -1,0 +1,240 @@
+﻿.year-view .year-box{
+}
+
+.year-view .year{
+    color:#ff0000;
+    font-size:2.5rem;
+    border-bottom:thin solid #cccccc;
+    padding-top:30px;
+    font-weight: bold;
+}
+
+.year-view .month-boxs{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.year-view .month-box{
+    width:33.33%;
+    padding:10px;
+}
+
+.year-view .month{
+    font-size:1.5rem;
+    margin-bottom: 4px;
+}
+
+.year-view .day-box{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.year-view .day{
+    width:14.286%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0.3rem;
+    height:3rem;
+    font-size: 0.8rem;;
+}
+
+.year-view .day.today{
+    background-color: #ff0000;
+    color:#ffffff;
+}
+
+.month-view .nav-bar{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:30px;
+    display: flex;
+    background-color: #ffffff;
+}
+.month-view .week-bar{
+    position:fixed;
+    top:30px;
+    left:0;
+    right:0;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 4px;
+    width:100%;
+    border-bottom: thin solid #cccccc;
+    height:30px;
+    background-color: #ffffff;
+}
+
+.month-view .week{
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.month-view .month-boxes{
+    padding-top:60px;
+}
+
+.month-view .month-box{
+    margin-bottom: 30px;
+}
+
+.month-view .month{
+    font-size:1.5rem;
+    height:3rem;
+    display: flex;
+    align-items: center;
+    color:#ff0000
+}
+
+.month-view .month-text{
+    flex:1 1 auto;
+    text-align:center;
+}
+
+.month-view .day-box{
+    display:flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+.month-view .day{
+    width:14.286%;
+    font-size:1.2rem;
+    height:5rem;
+    text-align: center;
+}
+.day-view{
+
+}
+.day-view .day-box{
+    display: flex;
+    overflow:auto;
+    align-items: center;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:60px;
+    background-color: #ffffff;
+    z-index:10;
+}
+.day-view .day{
+    width:14.286%;
+    text-align: center;
+}
+.day-view .time{
+    position:relative;
+    margin-top:80px;
+}
+.day-view .hour{
+    height:60px;
+    display: flex;
+    align-items: top;
+    position:relative;
+}
+.day-view .hour-quarter{
+    position:absolute;
+    left:0;
+    font-size: 0.8rem;
+    margin-top:-0.4rem;
+    display: none;
+    color:#666666;
+}
+.day-view .hour-quarter.q1{
+    top:25%;
+}
+.day-view .hour-quarter.q2{
+    top:50%;
+}
+.day-view .hour-quarter.q3{
+    top:75%;
+}
+.day-view .hour-text{
+    font-size: 0.8rem;
+    margin-top:-0.4rem;
+    width:60px;
+}
+.day-view .hour-line{
+    border-top:thin solid #cccccc;
+    flex:1 1 auto;
+}
+.day-view .event{
+    position:absolute;
+    top:0;
+    left:60px;
+    height:60px;
+    cursor: pointer;
+    border-left: thin solid #ff0000;
+    border-top:thin solid #03c;
+}
+.day-view .event .event-handle-top{
+    position: absolute;
+    top:0px;
+    left:20px;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border:3px solid #03c;
+    background-color: #ffffff;
+    z-index:1001;
+}
+.day-view .event .event-handle-bottom{
+    position: absolute;
+    bottom:0px;
+    right:20px;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border:3px solid #03c;
+    background-color: #ffffff;
+    z-index:1001;
+}
+.day-view .event .text{
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    z-index: 10;
+    color:#ffffff;
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; 
+    padding-left: 4px;
+}
+.day-view .event .background{
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity: 0.4;
+    background-color: rgb(7, 185, 185);
+    z-index: 1;
+}
+
+@media (max-width: 359px) {
+}
+
+@media (min-width: 360px) {
+}
+
+@media (min-width: 600px) {
+
+}
+
+@media (min-width: 960px) {
+
+}
+
+@media (min-width: 1440px) {
+}

@@ -1,0 +1,11 @@
+<div id="{id}" name="image" class="layer" v-bind:style="{zIndex:zIndex}">
+    [[common-user-bar]]
+    <div class="needfade" style="position: absolute;top:0;left:0;right:0;bottom:0;z-index: 1;background-color:#ffffff;">{{content}}</div>
+    <div class="main-box unselectable">
+        <div class='image-container'>
+            <img class='image' name='icb' v-bind:src='image.url' 
+            v-bind:w='image.properties.width' v-bind:h='image.properties.height' v-on:load="init()" />
+        </div>
+        <div class='canvas-box'><canvas class='myCanvas' width='1' height='1'></canvas></div>
+    </div>
+</div>

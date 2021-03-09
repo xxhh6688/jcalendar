@@ -1,0 +1,30 @@
+<div id='main-box' class='unselectable'>
+    <div id='comment-dialog' v-if='showCommentDialog' class='dialog'>
+        <div class='dialog-bk'></div>
+        <div class='dialog-inner'>
+            <div class='dialog-bar'>
+                <span>add comment</span>
+                <div class='dialog-bar-close' v-on:click='showCommentDialog=false'><i class='fas fa-times'></i></div>
+            </div>
+            <div class='dialog-contentpane' style='padding:16px;'>
+                <div><textarea id='comment-text' style='width:100%;' rows=5></textarea></div>
+                <div><span>剩余字数:</span><span id='comment-text-length'></span></div>
+                <div><a href='javascript:void(0)' class='btn btn-pri' v-on:click='addComment()'>确定</a></div>
+            </div>
+        </div>
+    </div>
+    <div id='image-comment-list-box' v-on:scroll='imageCommentsScroll()' v-if="imageShow">
+        <div v-for='ic in imageCommentList' style='padding:20px;' v-on:click='player.highlightItem(ic.id)'>
+            <div style='margin-bottom:4px;'><a href="javascript:void(0)" v-on:click="startConversation()"><span>user name</span></a></div>
+            <div>
+                <span>{{ic.text}}</span>
+            </div>
+        </div>
+    </div>
+    <div id='log-list-box' v-if='debug'>
+    </div>
+    <div id='image-container' v-if="imageShow"><img id='image' name='icb' v-bind:src='image.url' v-on:load='init()' /></div>
+    <div id='canvas-box' v-if="imageShow"><canvas id='myCanvas' width='1' height='1'></canvas></div>
+    <span style='position:absolute;top:10px;right:10px;cursor:pointer;z-index:101'
+          v-on:click='close()' class="fas fa-times" v-if="imageShow"></span>
+</div>
